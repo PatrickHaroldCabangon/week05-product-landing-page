@@ -19,7 +19,7 @@
     <section id="menu" data-reveal class="max-w-5xl mx-auto px-6 py-16 border-t border-stone-200">
     <p class="text-sm tracking-widest text-[#7A2E2E] mb-3">ALL TIME FAVORITES</p>
     <h2 class="font-serif text-3xl text-stone-900 mb-10">Crowd favorites</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
         <x-menu-card image="{{ asset('images/image3.jpg') }}" name="Belly's Fried Chicken" price="₱144" tag="Best Seller" />
         <x-menu-card image="{{ asset('images/image4.jpg') }}" name="Shawarma Rice Special" price="₱189" />
         <x-menu-card image="{{ asset('images/image5.jpg') }}" name="Crispy Sisig Bowl" price="₱189" />
