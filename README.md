@@ -1,4 +1,43 @@
-- **Responsive Utility Classes:** Prefixes like `sm:`, `md:`, and `lg:` are used throughout (e.g., `grid-cols-2 md:grid-cols-4`, `hidden md:flex`) to change layout behavior at different screen sizes without writing media queries manually.
+# Big Belly's — Responsive Product Landing Page
+
+A responsive restaurant landing page built with Laravel, Blade Components, and Tailwind CSS for **Big Belly's**, a real Filipino restaurant based in Los Baños, Laguna, established in 2011.
+
+🔗 **Live Repository:** https://github.com/PatrickHaroldCabangon/week05-product-landing-page
+
+---
+
+## 1. Introduction
+
+A **product landing page** is a single, focused web page designed to introduce a business, product, or service and guide visitors toward a specific action — in this case, viewing the menu or visiting the restaurant. Landing pages matter because they are often a customer's first impression of a business online: a clear, well-designed page builds trust, communicates value quickly, and increases the chance that a visitor becomes a customer.
+
+The purpose of this project is to design and build a modern, responsive landing page for a real local business (Big Belly's) using Laravel Blade Components and Tailwind CSS, applying component-based frontend architecture and responsive design principles learned in this module.
+
+## 2. Objectives
+
+By completing this project, the following learning objectives were accomplished:
+
+- Built a fully responsive interface using Tailwind CSS utility classes.
+- Applied component-based frontend architecture using Laravel Blade Components.
+- Created reusable components (navbar, hero, feature-card, menu-card, pricing-card, testimonial-card, button, footer) to eliminate duplicated code.
+- Applied responsive layouts using Flexbox and CSS Grid across breakpoints (mobile, tablet, desktop).
+- Implemented a consistent design system — typography, color palette, spacing, and button styles.
+- Documented the frontend architecture and component design decisions in this README.
+
+## 3. Responsive Web Design
+
+- **Mobile-First Design:** The layout was built starting from small screens, then progressively enhanced for larger viewports using Tailwind's responsive prefixes (`sm:`, `lg:`).
+- **Responsive Breakpoints:** Grids and navigation change behavior at the `lg` (1024px) breakpoint — the navbar switches from a horizontal link list to a hamburger dropdown menu below `lg`, since the full link set plus logo and button did not fit comfortably at the `md` (768px) breakpoint on tablet-sized screens.
+- **Flexbox:** Used throughout the navbar, hero button groups, and footer social icons to align items along a single axis.
+- **CSS Grid:** Used for the Features, Menu Showcase, Pricing, and Testimonials sections to arrange cards responsively (e.g., `grid-cols-2` on mobile, `sm:grid-cols-3`, `lg:grid-cols-4` on larger screens).
+- **User Experience (UX):** Smooth scrolling, scroll-reveal animations, a sticky navbar with scroll-based shadow, and a mobile hamburger menu were added to improve navigation and visual feedback without being distracting.
+
+Responsive design is important because visitors access the site from a wide range of devices — phones, tablets, and desktops. A page that isn't responsive can break, become unreadable, or drive visitors away, directly hurting a business's ability to convert visitors into customers.
+
+## 4. Tailwind CSS
+
+- **Utility-First CSS:** Instead of writing custom CSS classes, styling is applied directly in markup using small, single-purpose utility classes (e.g., `px-6`, `text-stone-600`, `rounded-full`).
+- **Advantages:** Faster development, no context-switching between HTML and CSS files, and a constrained design system (spacing scale, color palette) that keeps the UI consistent.
+- **Responsive Utility Classes:** Prefixes like `sm:`, and `lg:` are used throughout (e.g., `grid-cols-2 lg:grid-cols-4`, `hidden lg:flex`) to change layout behavior at different screen sizes without writing media queries manually.
 - **Component Styling:** Each Blade component (buttons, cards) uses consistent utility patterns — for example, all cards share the same border, padding, and hover-transition conventions, keeping the UI visually unified.
 
 **Example from the project** (`button.blade.php`):
@@ -9,6 +48,7 @@ $classes = match($variant) {
 };
 ```
 This shows utility-first styling combined with a PHP `match` expression to switch between button variants using only Tailwind classes.
+
 
 ## 5. Blade Components
 
